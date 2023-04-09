@@ -12,8 +12,14 @@ document.addEventListener("keydown", (e) => {
 
 function playToggle() {    
     if (audioContext === null) {
+        if (audioElement === null) {
+            return;
+        }
+
         initAudioContext();
+
         playSpectrum();
+        initVolumeControl();
     }
     if (audioElement.paused) {
         audioElement.play();

@@ -1,6 +1,6 @@
 function playSpectrum() {
     // Define audio context and source
-    const audioSource = audioContext.createMediaElementSource(audioElement);
+    audioSource = audioContext.createMediaElementSource(audioElement);
 
     // Define analyser node
     const analyserNode = audioContext.createAnalyser();
@@ -59,7 +59,7 @@ function playSpectrum() {
         const barSpacing = 10;
         for (let i = 0; i < numBars; i++) {
             const barHeight = 3 + (canvas.height * 0.5) * bars[i].height / Math.pow(255, logFactor);
-            if (i == 0) {
+            if (i === 0) {
                 ctx.fillRect((i * barWidth) + (barSpacing / 2), canvas.height - barHeight, barWidth - barSpacing, barHeight);
             } else {
                 ctx.fillRect((i * barWidth) + (barSpacing / 2), canvas.height - barHeight, barWidth - barSpacing, barHeight);

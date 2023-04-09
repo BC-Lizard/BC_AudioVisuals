@@ -9,6 +9,7 @@ let mediaFileForPlayback = null;
 // Define audio context and source
 let audioContext = null;
 let audioElement = null;
+let audioSource = null;
 
 
 // initialize visualizer
@@ -44,7 +45,7 @@ if (visualizerMode === "SPECTRUM") {
 
     for (let i = 0; i < numBars; i++) {
         const barHeight = 3;
-        if (i == 0) {
+        if (i === 0) {
             ctx.fillRect((i * barWidth) + (barSpacing/2), canvas.height - barHeight, barWidth - barSpacing, barHeight);
         } else {
             ctx.fillRect((i * barWidth) + (barSpacing/2), canvas.height - barHeight, barWidth - barSpacing, barHeight);

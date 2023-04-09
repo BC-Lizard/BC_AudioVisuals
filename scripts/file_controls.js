@@ -34,7 +34,7 @@ function setFilePathForPlayback(filename) {
     audioElement.pause()
   }
   audioElement = new Audio(`${mediaPath.value}/${filename}`);
-  audioContext = null
+  // audioContext = null
   playToggle()
 }
 
