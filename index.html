@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hi Adam</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div id="main-content">
+        <div id="media-container">
+            <div id="left">
+                <div id="player-container">
+                    <canvas id="myCanvas"></canvas>
+                    <div id="media-buttons">
+                        <div class="media-button" id="previous">Previous</div>
+                        <div class="media-button" id="play-pause" onclick="playToggle()">Play</div>
+                        <div class="media-button" id="next">Next</div>
+                    </div>
+                </div>
+            </div>
+            <div id="right">
+                <div id="path-browser-container">
+                    <div in="path-browser">
+                        <input id="media-path-input" type="text" onchange="listFiles()" value=""/>
+                        <div id="file-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="bottom">
+            <div id="media-drawer-container">
+                <div id="media-drawer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/startup.js"></script>
+    <script src="scripts/spectrum.js"></script>
+    <script src="scripts/media_controls.js"></script>
+    <!-- <script src="scripts/sysAudio.js"></script> -->
+    <script src="scripts/file_controls.js"></script>
+</body>
+
+</html>
