@@ -1,53 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Hi Adam</title>
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
 
-<body>
-<div id="main-content">
-    <div id="media-container">
+  <body>
+    <div id="main-content">
+      <div id="media-container">
         <div id="left">
-            <div id="player-container">
-                <canvas id="myCanvas"></canvas>
-                <div id="media-buttons">
-                    <div class="media-button" id="previous">Previous</div>
-                    <div class="media-button" id="play-pause" onclick="playToggle()">Play</div>
-                    <div class="media-button" id="next">Next</div>
-                </div>
+          <div id="player-container">
+            <canvas id="myCanvas"></canvas>
+            <div id="media-buttons">
+              <div class="media-button" id="previous">Previous</div>
+              <div class="media-button" id="play-pause" onclick="playToggle()">Play</div>
+              <div class="media-button" id="next">Next</div>
             </div>
+          </div>
         </div>
         <div id="right">
-            <div id="path-browser-container">
-                <div id="path-browser">
-                    <input id="media-path-input" type="text" onchange="listFiles()" value=""/>
-                    <div id="file-list"></div>
-                </div>
+          <div id="path-browser-container">
+            <div id="path-browser">
+              <input id="media-path-input" type="text" onchange="listFiles()" value="" />
+              <div id="file-list"></div>
             </div>
-            <div id="volume-container">
-                <div id="volume-slider">
-                    <label for="volume-slider">Volume<input type="range" id="volume-control" min="-1" max="1.25" value="1"
-                                                            step="0.01"/></label>
-                </div>
+          </div>
+          <div id="volume-container">
+            <div id="volume-slider">
+              <label for="volume-slider"
+                >Volume<input
+                  type="range"
+                  id="volume-control"
+                  min="-1"
+                  max="1.25"
+                  value="1"
+                  step="0.01"
+              /></label>
             </div>
+          </div>
         </div>
         <div id="bottom">
-            <div id="media-drawer-container">
-                <div id="media-drawer">
-                </div>
-            </div>
+          <div id="media-drawer-container">
+            <div id="media-drawer"></div>
+          </div>
         </div>
+      </div>
+      <script src="scripts/startup.js"></script>
+      <script src="scripts/spectrum.js"></script>
+      <script src="scripts/media_controls.js"></script>
+      <!-- <script src="scripts/sysAudio.js"></script> -->
+      <script src="scripts/volume_control.js"></script>
+      <script src="scripts/file_controls.js"></script>
     </div>
-    <script src="scripts/startup.js"></script>
-    <script src="scripts/spectrum.js"></script>
-    <script src="scripts/media_controls.js"></script>
-    <!-- <script src="scripts/sysAudio.js"></script> -->
-    <script src="scripts/volume_control.js"></script>
-    <script src="scripts/file_controls.js"></script>
-</div>
-</body>
-
+  </body>
 </html>

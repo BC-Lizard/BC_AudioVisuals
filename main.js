@@ -1,6 +1,6 @@
 const { app, BrowserWindow, screen, ipcMain } = require('electron');
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
 
 const createWindow = () => {
   const win = new BrowserWindow({
@@ -8,13 +8,13 @@ const createWindow = () => {
     height: screen.getPrimaryDisplay().size.height,
     autoHideMenuBar: true,
     webPreferences: {
-        nodeIntegration: true,
-        preload: path.join(__dirname, 'scripts/preload.js')
-    }
+      nodeIntegration: true,
+      preload: path.join(__dirname, 'scripts/preload.js'),
+    },
   });
 
   // Set Icon
-  win.setIcon('favicon.png')
+  win.setIcon('favicon.png');
 
   // Maximize window by default
   win.maximize();

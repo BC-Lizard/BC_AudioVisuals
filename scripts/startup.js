@@ -11,7 +11,6 @@ let audioContext = null;
 let audioElement = null;
 let audioSource = null;
 
-
 // initialize visualizer
 // Set canvas width and height
 canvas.width = window.innerWidth;
@@ -38,21 +37,31 @@ let barWidth = canvas.width / numBars;
 let barSpacing = 10;
 let barColor = '#fff';
 
-if (visualizerMode === "SPECTRUM") {
-    // Clear canvas and draw bars
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = barColor;
+if (visualizerMode === 'SPECTRUM') {
+  // Clear canvas and draw bars
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = barColor;
 
-    for (let i = 0; i < numBars; i++) {
-        const barHeight = 3;
-        if (i === 0) {
-            ctx.fillRect((i * barWidth) + (barSpacing/2), canvas.height - barHeight, barWidth - barSpacing, barHeight);
-        } else {
-            ctx.fillRect((i * barWidth) + (barSpacing/2), canvas.height - barHeight, barWidth - barSpacing, barHeight);
-        }
+  for (let i = 0; i < numBars; i++) {
+    const barHeight = 3;
+    if (i === 0) {
+      ctx.fillRect(
+        i * barWidth + barSpacing / 2,
+        canvas.height - barHeight,
+        barWidth - barSpacing,
+        barHeight,
+      );
+    } else {
+      ctx.fillRect(
+        i * barWidth + barSpacing / 2,
+        canvas.height - barHeight,
+        barWidth - barSpacing,
+        barHeight,
+      );
     }
+  }
 }
 
 function initAudioContext() {
-    audioContext = new AudioContext();
+  audioContext = new AudioContext();
 }
