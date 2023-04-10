@@ -5,6 +5,8 @@ const initVolumeControl = () => {
 
   const volumeControl = document.querySelector('#volume-control');
 
+  gainNode.gain.value = volumeControl.value;
+
   volumeControl.addEventListener(
     'input',
     () => {
